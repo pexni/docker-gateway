@@ -12,6 +12,9 @@ services:
       - "8090:8090"
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
+      - /root/go/src/github.com/pexni/docker-gateway:/app
+    command:
+      - /app/main.go
     restart: always
 
 

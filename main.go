@@ -57,7 +57,7 @@ func ServeHttpProxy() {
 	http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
 		hostArr := strings.Split(r.Host, ".")
 		if len(hostArr) == 2 || len(hostArr) > 3 {
-			xhttp.Ok(w, 200, "success", nil)
+			xhttp.Ok(w, 200, "success", r.Host)
 			return
 		}
 		// get the service name
