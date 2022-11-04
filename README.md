@@ -1,2 +1,2 @@
 # docker-gateway
-docker gateway proxy
+single host local docker gateway proxy
